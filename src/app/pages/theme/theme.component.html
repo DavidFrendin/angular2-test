@@ -1,0 +1,129 @@
+<app-toolbar class="toolbar">
+	Theme
+</app-toolbar>
+
+<div class="content">
+	<section class="panel">
+		<h1 class="panel__caption">Typography</h1>
+		<p>Roboto for body accented by Hind combining legibility with boldness.</p>
+		<div class="panel">
+			<div class="text text--lead">Leading text</div>
+			<p class="text text--paragraph">The approach will not be easy. You are required to maneuver straight down this trench and skim the surface to this point. The target area is only two meters wide. It’s a small thermal exhaust port, right below the main port. The shaft leads directly to the reactor system. A precise hit will start a chain reaction which should destroy the station. Only a precise hit will set up a chain reaction. The shaft is ray-shielded, so you’ll have to use proton torpedoes. That’s impossible, even for a computer. It’s not impossible. I used to bull’s-eye womp rats in my T-sixteen back home. They’re not much bigger than two meters. Man your ships! And may the Force be with you!</p>
+			<div class="text text--caption">Caption</div>
+			<div class="flex">
+				<div class="text text--left">Left align</div>
+				<div class="text text--center flex__fill">Center align</div>
+				<div class="text text--right">Right align</div>
+			</div>
+		</div>
+
+		<div class="flex">
+			<div class="flex__fill panel">
+				<h1 class="panel__caption">Roboto</h1>
+				<p class="text text--roboto text--2x">The quick brown fox jumps over the lazy dog</p>
+				<p class="text text--roboto">The quick brown fox jumps over the lazy dog</p>
+				<p class="text text--roboto text--2x text--uppercase">The quick brown fox jumps over the lazy dog</p>
+				<p class="text text--roboto text--uppercase">The quick brown fox jumps over the lazy dog</p>
+			</div>
+			<div class="flex__fill panel">
+				<h1 class="panel__caption">Hind</h1>
+				<p class="text text--hind text--2x">The quick brown fox jumps over the lazy dog</p>
+				<p class="text text--hind">The quick brown fox jumps over the lazy dog</p>
+				<p class="text text--hind text--2x text--uppercase">The quick brown fox jumps over the lazy dog</p>
+				<p class="text text--hind text--uppercase">The quick brown fox jumps over the lazy dog</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="panel">
+		<h1 class="panel__caption">Palette</h1>
+
+		<div class="palette">
+			<div class="palette__color palette__color--primary"></div>
+			<div class="palette__name">Primary</div>
+		</div>
+
+		<div class="palette">
+			<div class="palette__color palette__color--green"></div>
+			<div class="palette__name">Green</div>
+		</div>
+
+		<div class="palette">
+			<div class="palette__color palette__color--blue"></div>
+			<div class="palette__name">Blue</div>
+		</div>
+
+		<div class="palette">
+			<div class="palette__color palette__color--purple"></div>
+			<div class="palette__name">Purple</div>
+		</div>
+
+		<div class="palette">
+			<div class="palette__color palette__color--yellow"></div>
+			<div class="palette__name">Yellow</div>
+		</div>
+
+		<div class="palette">
+			<div class="palette__color palette__color--orange"></div>
+			<div class="palette__name">Orange</div>
+		</div>
+
+		<div class="palette">
+			<div class="palette__color palette__color--red"></div>
+			<div class="palette__name">Red</div>
+		</div>
+
+		<div class="palette">
+			<div class="palette__color palette__color--grey"></div>
+			<div class="palette__name">Grey</div>
+		</div>
+
+	</section>
+
+	<section class="panel">
+		<h1 class="panel__caption">Toolbar</h1>
+
+		<app-toolbar class="toolbar">
+			<a class="button button--icon">
+				<fa-icon [icon]="faBars"></fa-icon>
+			</a>
+			The approach will not be easy
+		</app-toolbar>
+
+	</section>
+
+	<section class="panel">
+		<h1 class="panel__caption">Input</h1>
+		
+		<p class="text text--lead">Slider</p>
+		<div class="flex">
+			<div class="text">{{rangeValue}}</div>
+			<input type="range" min="1" max="100" class="slider flex__fill" [(ngModel)]="rangeValue" />
+		</div>
+	</section>
+
+	<section class="panel">
+		<h1 class="panel__caption">Buttons</h1>
+
+		<a class="button">Regular</a>
+		<a class="button button--primary">Primary</a>
+		<a class="button button--flat">Flat</a>
+		<a class="button button--flat button--primary">Flat primary</a>
+		<a class="button button--icon">
+			<fa-icon [icon]="faBars" class="button__icon"></fa-icon>
+		</a>
+		<a class="button button--icon button--disabled">
+			<fa-icon [icon]="faBars" class="button__icon"></fa-icon>
+		</a>
+
+	</section>
+
+	<section class="panel">
+		<h1 class="panel__caption">Image grid</h1>
+
+		<div class="image-grid">
+			<app-image class="image-grid__image image-container" *ngFor="let image of mockImageList" [image]="image" (click)="imageClick();" (tap)="imageTap();"></app-image>
+		</div>
+
+	</section>
+</div>

@@ -1,0 +1,63 @@
+.text {
+	
+	line-height: 140%;
+
+	&.text--caption {
+		font-family: 'Hind', sans-serif;
+		font-weight: 700;
+		font-size: 1.5em;
+		margin-block-start: .8em;
+		margin-block-end: .8em;
+	}
+
+	&.text--lead {
+		font-size: 1.3em;
+		margin-block-end: .2em;
+	}
+
+	&.text--left {
+		text-align: left;
+	}
+
+	&.text--center {
+		text-align: center;
+	}
+
+	&.text--right {
+		text-align: right;
+	}
+
+	&.text--paragraph {
+		margin-block-start: .4em;
+		margin-block-end: .4em;
+	}
+
+	&.text--crop {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&.text--roboto {
+		font-family: 'Roboto', sans-serif;
+	}
+
+	&.text--hind {
+		font-family: 'Hind', sans-serif;
+		font-weight: 700;
+	}
+
+	&.text--2x {
+		font-size: 2em;
+	}
+
+	&.text--uppercase {
+		text-transform: uppercase;
+	}
+
+	&.text--link {
+		text-decoration: none;
+		border-bottom: 1px solid currentColor;
+	}
+
+}

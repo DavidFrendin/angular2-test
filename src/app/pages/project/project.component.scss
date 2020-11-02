@@ -1,0 +1,59 @@
+@import '../../../sass/responsive';
+
+:host {
+	display: flex;
+	flex-direction: column;
+	max-height: 100%;
+}
+
+.content {
+	overflow-y: auto;
+	flex: 1;
+	padding: 2em;
+}
+
+section {
+	margin-bottom: 2em;
+}
+
+.project-section {
+	display: flex;
+	margin-bottom: 2em;
+
+	.project-section__image {
+		width: 300px;
+		background: #3498DB;
+
+		@include media("<tablet") {
+			display: none;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.project-section__body {
+		padding: 2em;
+		flex: 1;
+		background: rgba(0,0,0,.2);
+
+		&:first-child {
+			margin-right: 2em;
+
+			@include media("<tablet") {
+				margin-right: 0;
+			}
+		}
+
+		&:last-child {
+			margin-left: 2em;
+
+			@include media("<tablet") {
+				margin-left: 0;
+			}
+		}
+
+	}
+
+}

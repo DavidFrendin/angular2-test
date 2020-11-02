@@ -1,0 +1,63 @@
+@import '../../../sass/colors';
+
+:host {
+	display: flex;
+	flex-direction: column;
+	max-height: 100%;
+}
+
+.content {
+	overflow-y: auto;
+	flex: 1;
+	padding: 2em;
+}
+
+.palette {
+	display: flex;
+	margin-bottom: 2em;
+
+	.palette__color {
+		width: 2em;
+		height: 2em;
+		border: 2px solid rgba(0,0,0,.9);
+		border-radius: 2px;
+
+		&.palette__color--primary {
+			background: $color-primary;
+		}
+
+		&.palette__color--green {
+			background: $color-green;
+		}
+
+		&.palette__color--blue {
+			background: $color-blue;
+		}
+
+		&.palette__color--purple {
+			background: $color-purple;
+		}
+
+		&.palette__color--yellow {
+			background: $color-yellow;
+		}
+
+		&.palette__color--orange {
+			background: $color-orange;
+		}
+
+		&.palette__color--red {
+			background: $color-red;
+		}
+
+		&.palette__color--grey {
+			background: $color-grey;
+		}
+
+	}
+
+	.palette__name {
+		margin-left: 1.2em;
+		line-height: 2em;
+	}
+}

@@ -1,0 +1,7 @@
+.responsive {
+	&.responsive--hide-desktop {
+		@include media(">=desktop") {
+			display: none;
+		}
+	}
+}

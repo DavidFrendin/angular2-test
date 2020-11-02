@@ -1,0 +1,8 @@
+.toolbar {
+	@include shadow-elevation-2;
+	font-size: 1.3em;
+	padding: 1em;
+	display: flex;
+	align-items: center;
+	z-index: 20;
+}

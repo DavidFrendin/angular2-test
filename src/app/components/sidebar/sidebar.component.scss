@@ -1,0 +1,55 @@
+@import '../../../sass/mixins';
+@import '../../../sass/responsive';
+
+.avatar {
+	@include shadow-elevation-2;
+	padding-bottom: 3em;
+	@include media("<desktop") {
+		padding-bottom: 1em;
+	}
+
+	.avatar__image {
+		border-radius: 50%;
+		width: 120px;
+		max-width: 100%;
+		margin: 0 auto;
+		display: block;
+		margin-top: 3em;
+		@include media("<desktop") {
+			margin-top: 1em;
+			width: 80px;
+		}
+	}
+
+	.avatar__username {
+		margin-top: 1em;
+		text-align: center;
+		font-family: 'Hind', sans-serif;
+		font-weight: 700;
+		font-size: 1.3em;
+	}
+}
+
+.sidebar__middle {
+	@include media(">=desktop") {
+		overflow-y: auto;
+	}
+}
+
+.sidebar__bottom {
+	background: rgba(0,0,0,.6);
+	padding: 1em;
+	font-size: 16px;
+
+	.ng-fa-icon {
+		margin-right: .3em;
+	}
+}
+
+.sidebar__close {
+	text-align: right;
+
+	@include media(">=desktop") {
+		display: none;
+	}
+}

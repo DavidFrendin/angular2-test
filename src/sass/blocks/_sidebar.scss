@@ -1,0 +1,32 @@
+.sidebar
+{
+	@include shadow-elevation-3;
+	background: $color-overlay-background;
+	color: $color-overlay-foreground;
+	width: 300px;
+	max-width: 100vw;
+	display: flex;
+	flex-direction: column;
+	max-height: 100vh;
+	overflow-y: auto;
+	transition: left .2s ease-in-out;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 100;
+
+	@include media("<=desktop") {
+		position: absolute;
+		left: -300px;
+
+		&.sidebar--open {
+			left: 0px;
+		}
+	}
+	.sidebar__middle {
+		flex: 1;
+	}
+}
+
+
+

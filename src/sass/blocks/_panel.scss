@@ -1,0 +1,14 @@
+.panel {
+	padding: 2em;
+	background: $color-overlay-background;
+	color: $color-container-foreground;
+	margin-block-end: .8em;
+
+	.panel__caption {
+		margin-top: 0;
+	}
+
+	.panel {
+		background: rgba(0,0,0,.3);
+	}
+}

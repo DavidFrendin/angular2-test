@@ -1,0 +1,199 @@
+<app-toolbar class="toolbar">Project</app-toolbar>
+<div class="content">
+	<section>
+		<h1 class="text text--caption">Project description</h1>
+		<div class="project-section">
+			<div class="project-section__image">
+				<img src="./assets/images/angular.png" />
+			</div>
+			<div class="project-section__body">
+				<p class="text text--lead">
+					Angular
+				</p>
+				<p class="text">
+					I originally wrote this in Vue.js as a test, but was asked to re-write it in Angular2+ using the same requirements. While I have
+					previously worked with AngularJS, Angular2+ and TypeScript in particular is uncharted territory.
+				</p>
+				<p class="text">
+					The project only has specific requirements for an external API, so with respect to my low experience I try not to do anything
+					too complex past the API calls, data binding and routing.
+				</p>
+			</div>
+		</div>
+		<div class="project-section">
+			<div class="project-section__body">
+				<p class="text text--lead">
+					Implementation
+				</p>
+				<p class="text">
+					While not following the guidelines strictly, I've modelled the design by Material Design principles, borrowing concepts to achieve
+					a responsive layout using elevated dockable sidebar with toolbar and content that combined works well across multiple screen-sizes.
+					Using a dark neutral theme with a clear contrast primary and no accent color, it should have a modern look and give emphasis to any
+					images or areas of color - perfectly suitable for the task.
+				</p>
+				<p class="text">
+					Given the short timeframe for development and the requirement to not use any CSS library I'd say the responsive approach should be,
+					while not perfect, fairly solid. The <a class="text text--link" routerLink="/theme">theme page</a> is a scaffold that demonstrates
+					the various elements created to make this project.
+				</p>
+				<p>
+					<a class="button" routerLink="/theme">View theme page</a>
+				</p>
+			</div>
+			<div class="project-section__image">
+				<img src="./assets/images/programming.png" />
+			</div>
+		</div>
+		<div class="project-section">
+			<div class="project-section__image">
+				<img src="./assets/images/ideas.png" />
+			</div>
+			<div class="project-section__body">
+				<p class="text text--lead">
+					Final thoughts
+				</p>
+				<p class="text">
+					After I've completed this test my final thoughts are that Angular, and TypeScript in particular, is not my strong suite (2020) - but I think I've
+					demonstrated that I can manage to learn and work with new technologies in a short amount of time, and given enough time I should be
+					able to become proficient in either vue.js or Angular2+.
+				</p>
+				<p class="text">
+					I believe I've demonstrated strong working knowledge in CSS/SASS, HTML and that I can make it work with Angular2+.
+				</p>
+
+				<p class="text">
+					<fa-icon [icon]="faClock"></fa-icon> Project time: ~16h
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="panel">
+			<h2 class="panel__caption text text--caption">Original requiremenets</h2>
+			<ul class="text">
+				<li>
+					Must be written in Angular2+
+					<ul>
+						<li>Should contain multiple components - at minimum a component for listing images and a component for menu</li>
+					</ul>
+				</li>
+				<li>May <strong>not</strong> use any CSS/layout framework (i.e. Bootstrap, Angular Material etc)</li>
+				<li>
+					Displays images via API : <a href="https://picsum.photos/v2/list">https://picsum.photos/v2/list</a>
+					<ul>
+						<li>
+							API result is paginated, user must be able to navigate across resultset pages
+							<ul>
+								<li>User should not be able to navigate to page &lt;1</li>
+								<li>User should not be able to navigate to pages beyond last page available</li>
+								<li>User should be able to see current page number</li>
+								<li>If a button for navigating pages is disabled, it should be visibly clear</li>
+							</ul>
+						</li>
+						<li>Author field and image id must be displayed on or below image</li>
+						<li>When clicked on an image, the image url field should opens in a new tab</li>
+						<li>User should be able to change number of results per page (1 to 100)</li>
+						<li>Images should be presented in a grid-like fashion (rows and columns)</li>
+					</ul>
+				</li>
+				<li>Responsive design; need not to be fully functional at mobile sizes but design should be able to scale across multiple screen-sizes (CSS media queries)</li>
+				<li>CSS should use <a href="http://getbem.com/introduction/">BEM</a> (or similar) naming convention</li>
+				<li>No mockup or wireframes provided, testee is free to envision how to best present the work</li>
+				<li>The test should be submitted as a git repository with any instructions given in the README.md file</li>
+				<li>Dependencies should be included in package.json - the project should run as intended after npm install && ng serve</li>
+			</ul>
+			
+			<h2 class="panel__caption text text--caption">Extra credit</h2>
+			<ul class="text">
+				<li>Use SASS or similar CSS preprocessor</li>
+				<li>Use flexbox or css grid where appropriate</li>
+				<li>Debounce API call to prevent spamming the web service</li>
+			</ul>
+		</div>
+	</section>
+
+	<section>
+		<div class="panel">
+			<h2 class="panel__caption text text--caption">What is being tested?</h2>
+			<div class="flex layout layout--margin-bottom">
+				<div>
+					<fa-icon [icon]="faHtml5" size="6x"></fa-icon>
+				</div>
+				<div class="layout layout--padding-left">
+					<div class="text text--lead">CSS/HTML</div>
+					<p class="text">
+						By not allowing any CSS frameworks such as bootstrap, and requiring the design to be responsive, CSS and HTML skills are being tested as there are
+						multiple paths that can create a responsive design. But the without support of a pre-written solutions found in frameworks, the testee needs to
+						demonstrate and understanding of media queires and how to build content intended for responsive use.
+					</p>
+					<p class="text">
+						As the test does not allow CSS frameworks, the testee have to create structural support and layout classes from scratch, demonstrating a basic
+						understanding of CSS.
+					</p>
+				</div>
+			</div>
+			<div class="flex layout layout--margin-bottom">
+				<div>
+					<fa-icon [icon]="faAngular" size="6x"></fa-icon>
+				</div>
+				<div class="layout layout--padding-left">
+					<div class="text text--lead">Angular2+</div>
+					<p class="text">
+						The project is really a bare-bones scaffolding around an API call. The test demonstrates that the testee can create a new Angular project
+						(prerequisites), make basic API calls from within the framework, bind and present the data with some basic logic.
+					</p>
+					<p class="text">
+						Points of interest should be how the testee will organize files and components - adhere to naming conventions and best-practises - and if
+						the provided code would be considered production ready (quality of code).
+					</p>
+				</div>
+			</div>
+			<div class="flex layout layout--margin-bottom">
+				<div>
+					<fa-icon [icon]="faPalette" size="6x"></fa-icon>
+				</div>
+				<div class="layout layout--padding-left">
+					<div class="text text--lead">Design & layout</div>
+					<p class="text">
+						A blank check is given to create any design - as long as the project specification is met, which is to display a list of pictures with
+						basic pagination controls. While this gives the freedom to envision a context for the project, it also allows for submission a minimalistic
+						boilerplate that only contains what is specificly specified by the requirements.
+
+						The testee is given a blank check to create any design freely. Will it be a minimalistic boilerplate or something complete? Will it look descent?
+						Would it work in any real-world applications?
+					</p>
+					<p class="text">
+						Points of interest should be if the presented works is rich and complete (overachiever) or basic. If the presented solution is very basic in nature,
+						does it accurately demonstrates the testees skills - or if the presented solution is more complete; how does it stack up? Does it demonstrate
+						knowledge of UX principles?
+					</p>
+				</div>
+			</div>
+			<div class="flex layout layout--margin-bottom">
+				<div>
+					<fa-icon [icon]="faTerminal" size="6x"></fa-icon>
+				</div>
+				<div class="layout layout--padding-left">
+					<div class="text text--lead">Git, npm & cli</div>
+					<p class="text">
+						Version management is a central tool regardless of work. By presenting the solution in form of a git repository, it is demonstrated that
+						the testee at minimum can create a repository and commit code. Package.json should be telling if the testee has basic understanding on
+						package dependencies - as the presented solution needs to be working without a local copy of the node_modules directory present.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="panel">
+			<h2 class="panel__caption text text--caption">Credits</h2>
+			Written by David Frendin 2020. Pictures & icons from <a href="https://www.freepik.com/" class="text text--link">www.freepik.com</a>,
+			<a href="https://www.flaticon.com/home" class="text text--link">www.flaticon.com</a> and <a href="https://fontawesome.com/" class="text text--link">
+			fontawesome.com</a>. Credits for any code borrowed should be indicated in comments where relevant.
+		</div>
+	</section>
+
+</div>
+

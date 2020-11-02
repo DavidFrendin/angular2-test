@@ -1,0 +1,16 @@
+<app-toolbar class="toolbar flex">
+	<div class="flex__fill"></div>
+	<a class="button button--icon" [class.button--disabled]="page === 1 || loading" (click)="previousPage();">
+		<fa-icon [icon]="faAngleDoubleLeft" class="button__icon"></fa-icon>
+	</a>
+	<div class="text">
+		Page {{page}}
+	</div>
+	<a class="button button--icon" [class.button--disabled]="!picsumService.nextPage || loading" (click)="nextPage();">
+		<fa-icon [icon]="faAngleDoubleRight" class="button__icon"></fa-icon>
+	</a>
+	<input type="range" min="10" max="100" step="10" class="slider" [(ngModel)]="resultsPerPage" (ngModelChange)="resultsPerPageModelChanged($event)" />
+</app-toolbar>
+<div class="image-grid">
+	<app-image class="image-grid__image image-container" *ngFor="let image of images$" [image]="image" (click)="imageClick(image);"></app-image>
+</div>

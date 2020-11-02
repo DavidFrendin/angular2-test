@@ -1,0 +1,29 @@
+.image-grid {
+	.image-grid__image {
+		width: calc(100% / 3 - .4em);
+		display: inline-block;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin: 0 .2em;
+		cursor: pointer;
+		opacity: .7;
+		transition: all .1s ease-in-out;
+
+		@include media("<=phone") {
+			width: calc(100% - .4em);
+		}
+
+		@include media(">phone", "<=tablet") {
+			width: calc(100% - .4em);
+		}
+		@include media(">tablet", "<=desktop") {
+			width: calc(100% / 2 - .4em);
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+
+	}
+}
