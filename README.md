@@ -18,7 +18,7 @@ Other dependencies are defined in the package.json file, install dependencies vi
     npm install
 
 ## Building
-    ng run serve --open
+    ng serve --open
 
 ## Project
 ### Specification
